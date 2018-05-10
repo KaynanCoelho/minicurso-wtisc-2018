@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ms-distance-calculator
+  cloud:
+    config:
+      uri: ${CONFIG_URI:http://localhost:8888}
+      profile: ${CONFIG_PROFILE:${TENANT_ID}}
+      label: ${CONFIG_BRANCH:master}
+      fail-fast: true
+  profiles:
+      active: ${ACTIVE_PROF:default}
+server:
+  port: ${PORT:8080}
