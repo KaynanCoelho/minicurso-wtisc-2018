@@ -16,3 +16,22 @@ management:
 
 server:
   port: ${PORT:8080}
+
+# Service Discovery Name
+app:
+  discovery:
+    name: ${spring.application.name}-${TENANT_ID}
+
+
+eureka:
+  instance:
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+    appname: ${app.discovery.name}
+    virtual-host-name: ${app.discovery.name}
+    leaseRenewalIntervalInSeconds: 10
+    prefer-ip-address: true
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:9091}/eureka/

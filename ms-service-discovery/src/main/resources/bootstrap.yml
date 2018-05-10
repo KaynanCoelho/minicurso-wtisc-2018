@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: EurekaServer
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9091/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+
+server:
+  port: 9091
