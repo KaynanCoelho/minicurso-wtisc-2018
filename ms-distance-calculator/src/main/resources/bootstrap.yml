@@ -9,5 +9,10 @@ spring:
       fail-fast: true
   profiles:
       active: ${ACTIVE_PROF:default}
+
+management:
+  security:
+    enabled: false
+
 server:
   port: ${PORT:8080}
