@@ -11,12 +11,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConfigDistance {
 
-    @Value("${distance-calculator.algorithm:HARVESINE}")
+    @Value("${distance-calculator.algorithm}")
     private DistanceCalculatorType type;
 
     @Bean
     public DistanceCalculator getDistanceCalculator() {
-        if (type.equals(DistanceCalculatorType.HARVESINE)) {
+        if (type.equals(DistanceCalculatorType.HAVERSINE)) {
             return new HaversineDistanceCalculator();
         } else {
             return new OdometerDistanceCalculator();
