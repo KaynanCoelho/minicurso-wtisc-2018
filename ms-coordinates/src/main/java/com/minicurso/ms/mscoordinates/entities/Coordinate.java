@@ -10,6 +10,7 @@ public class Coordinate {
 
     @Id
     private String id;
+    private String equipmentKey;
     private Position position;
     private Long odometerMeters;
     private Double speedKmh;
@@ -26,6 +27,14 @@ public class Coordinate {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getEquipmentKey() {
+        return equipmentKey;
+    }
+
+    public void setEquipmentKey(String equipmentKey) {
+        this.equipmentKey = equipmentKey;
     }
 
     public Position getPosition() {
