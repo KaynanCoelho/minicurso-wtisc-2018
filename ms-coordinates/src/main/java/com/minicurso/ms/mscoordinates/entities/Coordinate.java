@@ -76,4 +76,17 @@ public class Coordinate {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "Coordinate{" +
+                "id='" + id + '\'' +
+                ", equipmentKey='" + equipmentKey + '\'' +
+                ", position=" + position +
+                ", odometerMeters=" + odometerMeters +
+                ", speedKmh=" + speedKmh +
+                ", engineOn=" + engineOn +
+                ", date=" + date +
+                '}';
+    }
 }

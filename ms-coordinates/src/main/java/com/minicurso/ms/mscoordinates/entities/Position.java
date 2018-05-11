@@ -23,4 +23,12 @@ public class Position {
     public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "longitude=" + longitude +
+                ", latitude=" + latitude +
+                '}';
+    }
 }
