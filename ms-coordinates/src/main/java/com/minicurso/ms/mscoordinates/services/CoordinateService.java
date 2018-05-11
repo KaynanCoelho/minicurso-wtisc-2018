@@ -14,7 +14,7 @@ public class CoordinateService {
     private CoordinateRepository coordinateRepository;
 
     public Page<Coordinate> findAllByEquipmentKey(String equipmentKey, Pageable page) {
-        return coordinateRepository.findAllByEquipmentKey(equipmentKey, page);
+        return coordinateRepository.findAllByEquipmentKeyOrderByDateAsc(equipmentKey, page);
     }
 
 }

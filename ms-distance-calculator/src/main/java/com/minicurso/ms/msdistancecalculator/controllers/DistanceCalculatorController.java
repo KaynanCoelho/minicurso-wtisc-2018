@@ -19,6 +19,7 @@ public class DistanceCalculatorController {
 
     @PostMapping
     public Double getDistance(@RequestBody List<Coordinate> coordinates) {
+        System.out.println("CHEGOU AQUI");
         return distanceCalculator.calculateInMeters(coordinates);
     }
 

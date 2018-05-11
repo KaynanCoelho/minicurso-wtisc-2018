@@ -1,4 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://172.17.0.5:27017
+      uri: mongodb://172.16.0.139:27017
+      database: ms-coordinates-${TENANT_ID}
+      repositories:
+        enabled: true

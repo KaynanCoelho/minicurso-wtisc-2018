@@ -15,7 +15,7 @@ management:
     enabled: false
 
 server:
-  port: ${PORT:8585}
+  port: ${PORT:4545}
 
 # Service Discovery Name
 app:

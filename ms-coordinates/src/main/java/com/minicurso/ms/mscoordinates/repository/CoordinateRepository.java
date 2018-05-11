@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CoordinateRepository extends MongoRepository<Coordinate, String> {
 
-    Page<Coordinate> findAllByEquipmentKey(String equipmentKey, Pageable page);
+    Page<Coordinate> findAllByEquipmentKeyOrderByDateAsc(String equipmentKey, Pageable page);
 }
